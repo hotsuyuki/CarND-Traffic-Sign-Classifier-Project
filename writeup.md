@@ -12,21 +12,6 @@ The goals / steps of this project are the following:
 * Analyze the softmax probabilities of the new images
 * Summarize the results with a written report
 
-
-[//]: # (Image References)
-
-[image0]: ./visualize_cnn.png "Distribution of train dataset"
-[image1]: ./writeup_images/train_distribution.png "Distribution of train dataset"
-[image2]: ./writeup_images/valid_distribution.png "Distribution of valid dataset"
-[image3]: ./writeup_images/test_distribution.png "Distribution of test dataset"
-[image]: ./examples/grayscale.jpg "Grayscaling"
-[image]: ./examples/random_noise.jpg "Random Noise"
-[image]: ./new_images/new_image1.png "Traffic Sign 1"
-[image]: ./new_images/new_image2.png "Traffic Sign 2"
-[image]: ./new_images/new_image3.png "Traffic Sign 3"
-[image]: ./new_images/new_image4.png "Traffic Sign 4"
-[image]: ./new_images/new_image5.png "Traffic Sign 5"
-
 ## Rubric Points
 ### Here I will consider the [rubric points](https://review.udacity.com/#!/rubrics/481/view) individually and describe how I addressed each point in my implementation.  
 
@@ -51,13 +36,17 @@ signs data set:
 
 Here is an exploratory visualization of the data set. It is a bar chart showing how the train, valid and test dataset is distributed.
 
-![alt text][image0]
+<div style="text-align:center">
+<img src="./writeup_images/train_distribution.png">
+</div>
 
-![alt text][image1]
+<div style="text-align:center">
+<img src="./writeup_images/valid_distribution.png">
+</div>
 
-![alt text][image2]
-
-![alt text][image3]
+<div style="text-align:center">
+<img src="./writeup_images/test_distribution.png">
+</div>
 
 The distributions of these dataset are similar each other, that implies both valid and test dataset might be retrieved from same train dataset.
 
@@ -65,19 +54,51 @@ The distributions of these dataset are similar each other, that implies both val
 
 #### 1. Describe how you preprocessed the image data. What techniques were chosen and why did you choose these techniques? Consider including images showing the output of each preprocessing technique. Pre-processing refers to techniques such as converting to grayscale, normalization, etc.
 
-As a first step, I decided to augment the train images by Rotating, Translating, Zooming and Flipping because augmenting dataset would raise up the accuracy of the model. However, we should be aware not to lose the characteristics of the original images thorough the augmenting process.
+As a first step, I decided to augment the train images by Rotating, Translating, Zooming and Flipping because augmenting dataset would reduce overfitting of the model. However, we should be aware not to lose the characteristics of the original images thorough the augmenting process.
 
+* Rotating: Counter-Clock-Wise, Clock-Wise...15[deg] each
 
+<div style="text-align:center">
+<img src="./writeup_images/rotate_X_train.png">
+</div>
 
+* Translating: Top-Left, Top-Right, Bottom-Left, Bottom-Right...2[pixel] each
 
+<div style="text-align:center">
+<img src="./writeup_images/translate_X_train.png">
+</div>
 
+* Zooming: Up, Down...2[pixel] each
 
+<div style="text-align:center">
+<img src="./writeup_images/zoom_X_train.png">
+</div>
 
-Then I grayscaled and normalized the train images.
+Flipping augmentation is little tricky. There are 4 types of images that can be flipped.
 
-Here is an example of a traffic sign image before and after grayscaling.
+1. Images which are same appearance even after horizontal flipping... e.g. *[11] Right-of-way at the next intersection*
 
-![alt text][image2]
+2. Images which are same appearance even after vertical flipping... e.g. *[1] Speed limit (30km/h)*
+
+3. Images which are same appearance even after both horizontal and vertical flipping... e.g. *[32] End of all speed and passing limits*
+
+4. Images which change to other traffic sign after horizontal flipping... e.g. *[33] Turn right ahead* → *[34] Turn left ahead*
+
+Here is an example of a traffic sign image before and after flippin.
+
+* Flipping: Horizontally, Vertically, Both, Cross
+
+<div style="text-align:center">
+<img src="./writeup_images/flip_X_train.png">
+</div>
+
+I then grayscaled the train images. [This paper](http://yann.lecun.com/exdb/publis/pdf/sermanet-ijcnn-11.pdf) indicates that color information is not so important to classify images, even sometimes without color is better than using color.
+
+* Grayscaling:
+
+<div style="text-align:center">
+<img src="./writeup_images/gray_X_train.png">
+</div>
 
 As a last step, I normalized the image data because ...
 
