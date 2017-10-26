@@ -270,11 +270,11 @@ Here are the results of the top 5 predictions:
 
 | Image	| 1st Prediction | 2nd prediction | 3rd | 4th | 5th |
 |:-----:|:--------------:|:--------------:|:---:|:---:|:---:|
-| *[14] "Stop"* | ***[14] "Stop"***, 100.0% | [39] "Keep left", 0.0% | [8], 0.0% | [1], 0.0% | [17], 0.0% |
-| *[25] "Road work"* | ***[25] "Road work"***, 89.9% | [0] "Speed limit (20km/h)", 6.4% | [22], 1.8% | [20], 1.1% | [40], 0.5% |
-| *[1] "Speed limit (30km/h)"* | [2] "Speed limit (50km/h)", 65.8% | ***[1] "Speed limit (30km/h)"***, 22.8% | [12], 9.5% | [13], 1.4% | [40], 0.4% |
-| *[12] "Priority road"* | ***[12] "Priority road"***, 100.0% | [25] "Road work", 0.0% | [17], 0.0% | [40], 0.0% | [38], 0.0% |
-| *[28] "Children crossing"*	| ***[28] "Children crossing"***, 100.0% | [11] "Right-of-way at the next intersection", 0.0% | [40], 0.0% | [1], 0.0% | [36], 0.0% |
+| *[14] "Stop"* | ***[14] "Stop"*** , 100.0% | [39] "Keep left", 0.0% | [8], 0.0% | [1], 0.0% | [17], 0.0% |
+| *[25] "Road work"* | ***[25] "Road work"*** , 89.9% | [0] "Speed limit (20km/h)", 6.4% | [22], 1.8% | [20], 1.1% | [40], 0.5% |
+| *[1] "Speed limit (30km/h)"* | [2] "Speed limit (50km/h)", 65.8% | ***[1] "Speed limit (30km/h)"*** , 22.8% | [12], 9.5% | [13], 1.4% | [40], 0.4% |
+| *[12] "Priority road"* | ***[12] "Priority road"*** , 100.0% | [25] "Road work", 0.0% | [17], 0.0% | [40], 0.0% | [38], 0.0% |
+| *[28] "Children crossing"*	| ***[28] "Children crossing"*** , 100.0% | [11] "Right-of-way at the next intersection", 0.0% | [40], 0.0% | [1], 0.0% | [36], 0.0% |
 
 <div style="text-align:center">
 <img src="./writeup_images/prediction_result.png">
