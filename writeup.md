@@ -226,7 +226,7 @@ The reasons why the best validation accuracy in my code is less than the article
 
 #### 1. Choose five German traffic signs found on the web and provide them in the report. For each image, discuss what quality or qualities might be difficult to classify.
 
-Here are five German traffic signs that I found on the web:
+Here are [five German traffic signs](https://github.com/Hotsuyuki/CarND-Traffic-Sign-Classifier-Project/tree/master/new_images) that I found on the web:
 
 <div style="text-align:center">
 <img src="./writeup_images/new_images.png">
